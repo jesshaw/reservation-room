@@ -1,0 +1,55 @@
+{
+    "name": "Hotel",
+    "fields": [
+        {
+            "fieldName": "name",
+            "javadoc": "名称",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "address",
+            "javadoc": "地址",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "postCode",
+            "javadoc": "邮编",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "city",
+            "javadoc": "城市",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "url",
+            "javadoc": "网址",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191217073312",
+    "javadoc": "酒店",
+    "entityTableName": "hotel",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": [
+        "reservation",
+        "info"
+    ],
+    "microserviceName": "info"
+}
