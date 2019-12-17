@@ -16,6 +16,11 @@ application {
     clientFramework react,
     useSass true,
     testFrameworks [protractor]
+    dtoSuffix Dto
+    jhiPrefix lxm
+    clientPackageManager yarn
+    nativeLanguage zh-cn
+    languages [zh-cn,en]
   }
   entities *
 }
@@ -32,6 +37,11 @@ application {
     buildTool maven,
     serverPort 18081,
     skipUserManagement true
+    dtoSuffix Dto
+    jhiPrefix lxm
+    clientPackageManager yarn
+    nativeLanguage zh-cn
+    languages [zh-cn,en]
   }
   entities Hotel
 }
