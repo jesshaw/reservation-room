@@ -1,0 +1,82 @@
+/*
+ * This is a microservice hotel reservation sample with Gateway and three microservice applications
+ * This uses JHipster registry for service discovery and JWT authentication
+ */
+ 
+application {
+  config {
+    baseName reservation,
+    applicationType gateway,
+    packageName com.lexiangmiao.hotel.reservation,
+    serviceDiscoveryType eureka,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    cacheProvider hazelcast,
+    buildTool maven,
+    clientFramework react,
+    useSass true,
+    testFrameworks [protractor]
+  }
+  entities *
+}
+
+application {
+  config {
+    baseName info,
+    applicationType microservice,
+    packageName com.lexiangmiao.hotel.info,
+    serviceDiscoveryType eureka,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    cacheProvider hazelcast,
+    buildTool maven,
+    serverPort 18081,
+    skipUserManagement true
+  }
+  entities Hotel
+}
+
+/* Entities for Store Gateway */
+
+entity Customer {
+    firstName String required
+    lastName String required
+    gender Gender required
+    email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)
+    phone String required
+    addressLine1 String required
+    addressLine2 String
+    city String required
+    country String required
+}
+
+enum Gender {
+    MALE, FEMALE, OTHER
+}
+
+relationship OneToOne {
+    Customer{user(login) required} to User
+}
+
+service Customer with serviceClass
+paginate Customer with pagination
+
+/** Product sold by the Online reservation */
+/** 酒店 */
+entity Hotel {
+    /** 名称 */
+    name String required
+    /** 地址 */
+    address String required
+    /** 邮编 */
+    postCode String
+    /** 城市 */
+    city String required
+    /** 网址 */
+    url String
+}
+
+service Hotel with serviceClass
+paginate Hotel with pagination
+microservice Hotel with info
+
