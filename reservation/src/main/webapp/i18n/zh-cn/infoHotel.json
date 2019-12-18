@@ -1,0 +1,37 @@
+{
+  "reservationApp": {
+    "infoHotel": {
+      "home": {
+        "title": "Hotels",
+        "createLabel": "创建新 Hotel",
+        "createOrEditLabel": "创建或编辑 Hotel",
+        "notFound": "No Hotels found"
+      },
+      "delete": {
+        "question": "你确定要删除 Hotel {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Hotel"
+      },
+      "name": "Name",
+      "address": "Address",
+      "postCode": "Post Code",
+      "city": "City",
+      "url": "Url",
+      "help": {
+        "name": "名称",
+        "address": "地址",
+        "postCode": "邮编",
+        "city": "城市",
+        "url": "网址"
+      }
+    }
+  },
+  "infoApp": {
+    "infoHotel": {
+      "created": "Hotel {{ param }} 创建成功",
+      "updated": "Hotel {{ param }} 更新成功",
+      "deleted": "Hotel {{ param }} 删除成功"
+    }
+  }
+}

@@ -33,7 +33,6 @@
     "jwtSecretKey": "YzU4ODYyNmJmOGUyNTkyODBhMDlmMjA3MzgwNjVkY2JhOTRhMWZiZGVjN2FkNDNhY2Q4NTg2NDNmNWY4OTMxY2Y0NjkzZjg1ZTBjM2MzNjllYzVhNGE3MzA1NzQ5MmI5MWRlNzJmYjdmMmY5YzY1N2M1NmQyYTM1ZTk5ODAzZDc=",
     "embeddableLaunchScript": false,
     "entitySuffix": "",
-    "otherModules": [],
     "blueprints": []
   },
   "entities": [
