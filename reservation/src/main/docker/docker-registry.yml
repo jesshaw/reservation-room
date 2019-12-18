@@ -9,7 +9,7 @@ services:
       #  REGISTRY_HTTP_TLS_CERTIFICATE: file:./docker-registry/certs/domain.crt
       #  REGISTRY_HTTP_TLS_KEY: file:./docker-registry/certs/domain.key
       REGISTRY_AUTH: htpasswd
-      REGISTRY_AUTH_HTPASSWD_PATH: file:./docker-registry/auth/htpasswd
+      REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd # generate by hash: docker run --entrypoint htpasswd registry:2 -Bbn testuser testpassword > ./docker-registry/auth/htpasswd
       REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
     volumes:
       - ./docker-registry/data:/var/lib/registry
