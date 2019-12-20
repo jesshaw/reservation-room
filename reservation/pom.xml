@@ -623,7 +623,8 @@
                             <image>adoptopenjdk:11-jre-hotspot</image>
                         </from>
                         <to>
-                            <image>reservation:latest</image>
+                            <image>49.235.132.153:5000/lxm/reservation:latest</image>
+                            <!--mvn compile jib:build -Djib.to.auth.username=user -Djib.to.auth.password=pass-->
                         </to>
                         <container>
                             <entrypoint>
@@ -908,6 +909,8 @@
                                 <configuration>
                                     <nodeVersion>${node.version}</nodeVersion>
                                     <yarnVersion>${yarn.version}</yarnVersion>
+                                    <nodeDownloadRoot>https://npm.taobao.org/mirrors/node/</nodeDownloadRoot>
+                                    <yarnDownloadRoot>https://npm.taobao.org/mirrors/yarn/</yarnDownloadRoot>
                                 </configuration>
                             </execution>
                             <execution>
