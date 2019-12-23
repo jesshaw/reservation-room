@@ -1,7 +1,7 @@
 version: '2'
 services:
   info-app:
-    image: info
+    image: 49.235.132.153:5000/lxm/info
     environment:
 #      - _JAVA_OPTIONS=-Xmx512m -Xms256m
       - _JAVA_OPTIONS=-Xmx256m -Xms128m
