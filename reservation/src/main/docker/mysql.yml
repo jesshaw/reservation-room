@@ -2,8 +2,8 @@ version: '2'
 services:
   reservation-mysql:
     image: mysql:8.0.18
-    # volumes:
-    #     - ~/volumes/jhipster/reservation/mysql/:/var/lib/mysql/
+    volumes:
+      - ~/volumes/jhipster/reservation/mysql/:/var/lib/mysql/
     environment:
       - MYSQL_USER=root
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
