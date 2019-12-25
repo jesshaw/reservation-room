@@ -14,7 +14,7 @@ application {
     prodDatabaseType mysql,
     cacheProvider hazelcast,
     buildTool maven,
-    serverPort 18080,
+    serverPort 8090,
     clientFramework react,
     useSass true,
     testFrameworks [protractor]
@@ -38,7 +38,7 @@ application {
     prodDatabaseType mysql,
     cacheProvider hazelcast,
     buildTool maven,
-    serverPort 18081,
+    serverPort 8091,
     skipUserManagement true
     dtoSuffix Dto
     jhiPrefix lxm

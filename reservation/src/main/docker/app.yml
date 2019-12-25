@@ -12,7 +12,7 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:mysql://reservation-mysql:3306/reservation?useUnicode=true&characterEncoding=utf8&useSSL=false
       - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
     ports:
-      - 18080:18080
+      - 8090:8090
   reservation-mysql:
     extends:
       file: mysql.yml
