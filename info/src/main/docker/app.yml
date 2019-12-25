@@ -1,7 +1,7 @@
 version: '2'
 services:
   info-app:
-    image: localhost:5000/lxm/info
+    image: localhost:8085/lxm/info
     environment:
 #      - _JAVA_OPTIONS=-Xmx512m -Xms256m
       - _JAVA_OPTIONS=-Xmx256m -Xms128m
